@@ -1,0 +1,100 @@
+body {
+  background: #333;
+  font-family: monospace;
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+.wrapper {
+  width: 600px;
+  background-color: #0081b4;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quote-heading {
+  font-size: 40px;
+  text-align: center;
+}
+.quote-container {
+  display: flex;
+  justify-content: center;
+  /* gap: 20px; */
+}
+.quote-container i:first-child {
+  margin: -3px 10px 0 0;
+}
+.quote-container i:last-child {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 -3px 10px;
+}
+.quote-container .quote-text {
+  text-align: center;
+  font-size: 20px;
+  word-break: break-all;
+}
+.quote-author {
+  text-align: right;
+}
+.quote-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+}
+.quote-buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quote-buttons .quote-action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.quote-buttons .quote-action i {
+  width: 45px;
+  height: 45px;
+  font-size: 16px;
+  border: 2px solid white;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.quote-buttons .quote-action i:hover {
+  background-color: #fff;
+  color: #0081b4;
+  transition: 0.2s linear;
+}
+.quote-buttons .new-quote {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+.quote-buttons .new-quote.loading {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+  .quote-buttons {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .quote-text {
+    font-size: 18px;
+  }
+  .quote-heading {
+    font-size: 30px;
+  }
+}
